@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tien dien</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a=parseInt(prompt('Enter a number'))
+    let money;
+    if(a>0){
+        money=a*1678
+    } else if(a>50) {
+        money=(50*1.678)+(a-50)*1734
+    } else if(a>100) {
+        money=(50*1.678)+50*1.734+(a-100)*2014;
+    } else if (a>200) {
+        money=(50*1.678)+50*1.734+100*2.014+(a-100)*2536;
+    } else if(a>300) {
+        money=(50*1.678)+50*1.734+100*2.014+100*2536+(a-100)*2834;
+    } else {
+        money=(50*1.678)+50*1.734+100*2.014+100*2536+100*2834+(a-100)*2927;
+    }
+    document.write('Tien dien la: ' + money +' VND');
+</script>

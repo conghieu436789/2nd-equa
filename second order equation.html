@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Second order equation</title>
+</head>
+<body>
+    <input id="a" type="text" size="20"/>x <sup>2</sup> +
+    <input id="b" type="text" size="20"/>x+
+    <input id="c" type="text" size="20"/>=0 <br><br>
+    <input type="button" onclick="sol()" value="click me">
+    <p id="kq"></p>
+</body>
+</html>
+<script>
+    function sol(){
+        let a=document.getElementById('a').value;
+        let b=document.getElementById('b').value;
+        let c=document.getElementById('c').value;
+
+        let delta=(b*b)-(4*a*c);
+        let x1=((-b)+(Math.sqrt(delta)))/(2*a);
+        let x2=((-b)-(Math.sqrt(delta)))/(2*a);
+        let x3=(-b)/(2*a)
+        let result;
+        // let a=parseFloat(prompt('Enter a'));
+        // let b=parseFloat(prompt('Enter b'));
+        // let c=parseFloat(prompt('Enter c'));
+        // if(a==0){
+        //     document.write('not a 2th equa')
+        // } else if(delta<0){
+        //     document.write('vo nghiem')
+        // } else if(delta>0) {
+        //     document.write('Phuong trinh co 2 nghiem:  '+'x1= '+x1+ '    ' +'x2= '+x2)
+        // } else {
+        //     document.write('Phuong trinh co nghiem: x= ' + x3);
+        // }
+        if(a==0){
+            result='Khong phai pt bac 2';
+        } else if(delta<0){
+            result='Vo nghiem';
+        } else if(delta>0) {
+            result= 'Co 2 nghiem: '+'x1=' + x1 + "&emsp;" +'x2='+ x2
+        } else {
+            result= 'Co nghiem chung:' + x3;
+        }
+        document.getElementById('kq').innerHTML=result;
+    }
+</script>
